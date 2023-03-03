@@ -1,0 +1,966 @@
+:root{
+    --light-cyan: hsl(176, 50%, 47%);
+    --grey: hsl(0, 0%, 48%);
+    --border-grey: rgba(122, 122, 122, .3);
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    font-family: 'Commissioner', sans-serif;
+}
+
+ul{
+    padding: 0; 
+    margin: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    background-image: url('./images//image-hero-desktop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30em;
+}
+
+.hide{
+    display: none;
+}
+
+li{
+    list-style: none;
+}
+
+.back-project-section, .about-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1{
+    font-weight: 700;
+}
+
+p{
+    font-weight: 200;
+    color: var(--grey);
+}
+
+h2{
+    font-size: 1.2rem;
+}
+
+h3{
+    font-size: 1rem;
+    color: var(--light-cyan);
+    font-weight: 500;
+}
+
+.hamburger{
+    display: none;
+}
+
+.header-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation > ul{
+    display: flex;
+    color: white;
+}
+
+.navigation > ul li{
+    list-style: none;
+    padding-left: 1em;
+    display: block;
+    cursor: pointer;
+}
+
+.logo-div, .navigation{
+    margin: 5%;
+}
+
+.back-project-div{
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    position: relative;
+    top: -5em;
+}
+
+.bookmark{
+    display: flex;
+}
+
+.bookmark-btn{
+    z-index: 1;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.bookmark-text{
+    background-color: #f4f4f4;
+    padding: 1em 2em 1em 3em;
+    border-radius: 30px;
+    color: var(--grey);
+    font-weight: bold;
+    height: fit-content;
+    margin-left: -2.4em;
+    cursor: pointer;
+}
+
+.back-project-btn, .select-reward-btn, .continue-btn{
+    color: white;
+    font-weight: 500;
+    background-color: var(--light-cyan);
+    border-radius: 35px;
+    text-align: center;
+    width: fit-content;
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+.select-reward-btn{
+    height: fit-content;
+}
+
+.left-and-reward-btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.disabled{
+    pointer-events: none;
+    background-color: var(--border-grey);
+}
+
+.backers-div, .about-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.back-project-btns{
+    margin-top: 2em;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.back-project-div{
+    width: 35em;
+    padding: 2.5em 4em;
+}
+
+.back-project-btn{
+    font-size: 1rem;
+    padding: 1.2em 3.5rem;
+}
+
+.mastercraft-logo{
+    position: absolute;
+    top: -10%;
+    left: 46%;
+}
+
+.backers-div{
+    flex-direction: column;
+    justify-content: space-around;
+    width: 35em;
+    padding: 2.5em 4em;
+}
+
+.about-div{
+    width: 35em;
+    margin-top: 5em;
+    text-align: unset;
+    padding: 2.5em 4em;
+}
+
+.amount-div, .backers{
+    padding-right: 2.5em;
+    padding-left: 1em;
+    border-right: 1px solid var(--border-grey);
+}
+
+.amount-div{
+    padding-left: 0;
+}
+
+.days{
+    padding-left: 1em;
+}
+
+.backers-div-stats{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.bamboo-stand, .black-edition-stand, .mahogany-stand{
+    margin-top: 3em;
+    border-radius: 10px;
+    border: 1px solid var(--border-grey);
+    padding: 1em 2em 2em 2em;
+}
+
+.mahogany-stand.fade{
+    opacity: 0.5;
+}
+
+.bamboo-heading, .black-edition-heading, .mahogany-heading{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    display: flex;
+    align-items: center;
+}
+
+.left p{
+    margin-left: 0.5em;
+}
+
+.progress-bar{
+    margin-top: 1.5em;
+    background-color: #FAFAFA;
+    border-radius: 10px;
+    height: 0.8em;
+    width: 30em;
+}
+
+.progress{
+    background-color: var(--light-cyan);
+    border-radius: 10px;
+    height: 0.8em;
+    width: 20em;
+}
+
+.input-div{
+    position: relative;
+}
+
+.modal-input{
+    padding: 1.3em;
+    border-radius: 30px;
+    border: 1px solid var(--border-grey);
+    width: 6em;
+    max-width: 6em;
+    text-align: center;
+    outline: none;
+    margin-left: 5%;
+    font-weight: 700;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    z-index: 10;
+    position: absolute;
+    background-color: white;
+    border-radius: 12px;
+    width: 35em;
+    padding: 2.5em 4em;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    top: 130%; left: 50%;
+}
+
+#success-modal{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+    z-index: 10;
+    border-radius: 12px;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 200ms ease-in-out;
+    height: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 20em;
+    padding: 2em 4em;
+ 
+}
+
+#success-modal-text{
+    font-size: 0.9rem;
+    max-width: 20em;
+}
+
+#success-modal.active{
+    transform: translate(-50%, -50%) scale(1);
+    height: fit-content;
+}
+
+#got-it-button{
+    background-color: var(--light-cyan);
+    color: white;
+    padding: 1em 2em;
+    border-radius: 30px;
+}
+
+#check-svg{
+    width: 3em;
+    height: 3em;
+}
+
+.dollar-sign{
+    position: absolute;
+    top: 0; left: 30%;
+}
+
+.enter-pledge-div{
+    transition: transform 250ms ease;
+    margin-top: 2em;
+    border-top: 1px solid var(--border-grey);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1em 2em 1em 0;
+}
+
+.modal-div-content{
+    padding-right: 2em;
+}
+
+.enter-pledge-text{
+    margin-right: 3em;
+    width: 10em;
+}
+
+.continue-btn{
+    margin-left: 2em;
+}
+
+.input-and-btn{
+    display: flex;
+    justify-content: flex-end;
+}
+
+#close-modal{
+    background:none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+#overlay{
+    position: fixed;
+    opacity: 0;
+    top: 0; left: 0;
+    right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0,0.5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlay.active{
+    pointer-events: all;
+    opacity: 1;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.enter-pledge-div.inactive{
+    transform: scale(0);
+    height: 0;
+}
+
+.enter-pledge-div.active{
+    transform: scale(1);
+    height: fit-content;
+}
+
+.modal-div.selected{
+    border: 2px solid var(--light-cyan); 
+}
+
+.modal-div.unselected{
+    border: 1px solid var(--border-grey);
+}
+
+.mahogany-div.fade{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.pledge-heading > h2:hover{
+    color:hsl(176, 50%, 47%)
+}
+
+.radio-input{
+    display: none;
+}
+
+.radioBtn-label.inactive{
+    pointer-events: none;
+}
+
+.radio__radio{
+    width: 1.5em;
+    height: 1.5em;
+    border: 2px solid var(--border-grey);
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 2px;
+}
+
+.radio__radio::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: var(--light-cyan);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 200ms ease;
+}
+
+.radio-input:checked + .radio__radio::after{
+    transform: scale(1);
+}
+
+.heading-and-close{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkbox-and-heading{
+    margin: 5% 5% 0.5em 0.8em;
+    display: flex;
+    align-items: center;
+}
+
+.pledge-text{
+    margin-left: 3.8em;
+}
+
+.pledge-text >p{
+    margin-top: 0;
+}
+
+.pledge-heading{
+    display: flex;
+    margin-left: 1.5em;
+    width: 18em;
+    justify-content: space-between;
+    align-items : center;
+}
+
+.pledge-heading > h2{
+    font-size: 1rem;
+}
+
+.pledge-heading > h3{
+    font-size: 0.9rem;
+}
+
+.desktop-left > h1{
+    font-size: 1.4rem;
+}
+
+.desktop-left >p{
+    font-size: 0.8rem;
+}
+
+.mobile-left{
+    display: none;
+}
+
+.desktop-left{
+    margin-left: 5em;
+}
+
+#bamboo-pledge{
+    margin-right: 2em;
+}
+
+.bamboo-stand-div, .no-reward-div, .black-edition-div, .mahogany-div{
+    margin-top: 1.5em;
+    border-radius: 12px;
+}
+
+@media (max-width: 720px) {
+    header{
+        width: 100%;
+        background-image: url('./images//image-hero-mobile.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 30em;
+    }
+
+    .navigation{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+
+    .logo-div, .hamburger{
+        margin: 5%;
+    }
+
+    .hamburger > img{
+        width: 1.2em;
+    }
+
+    .back-project-div{
+        width: 20em;
+        padding: 2.5em 4em;
+    }
+
+    .bookmark-text{
+        display: none;
+    }
+    
+    .backers-div-stats{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+    }
+
+    .mastercraft-logo{
+        position: absolute;
+        top: -10%;
+        left: 44%;
+    }
+
+    .amount-div, .backers{
+        border: none;
+        border-bottom: 1px solid var(--border-grey);
+        padding: 0;
+    }
+
+    .days{
+        padding: 0;
+    }
+
+    .backers-div{
+        flex-direction: column;
+        align-items: center;
+        width: 20em;
+        padding: 2.5em 4em;
+        text-align: center;
+    }
+
+    .progress-bar{
+        width: 20em;
+    }
+
+    .progress{
+        width: 15em;
+    }
+
+    .about-div{
+        width: 20em;
+        padding: 2.5em 4em;
+    }
+
+    .select-reward-btn{
+        width: fit-content;
+        padding: 1em 2em;
+    }
+
+    .left-and-reward-btn{
+        display: block;
+    }
+
+    .mobile-left{
+        display: flex;
+    }
+
+    .modal{
+        margin-top: 2em;
+        width: 25em;
+        padding: 2em 4em;
+        top: 200%; left: 50%;
+    }    
+
+    #success-modal-text{
+        max-width: 17em;
+    }
+
+    .heading-and-text, .no-reward-div, .bamboo-stand-div, .black-edition-div, .mahogany-div{
+        margin: 5%;
+    }
+
+    .bamboo-heading, .black-edition-heading, .mahogany-heading{
+        display: block;
+    }
+
+    .desktop-left{
+        display: none;
+    }
+
+    .no-reward-div, .bamboo-stand-div, .black-edition-div, .mahogany-div{
+        padding-bottom: 0em;
+        margin-bottom: 0;
+        padding-top: 1em;
+        border-radius: 12px;
+    }
+
+    .no-reward-div.selected, .black-edition-div.selected, .mahogany-div.selected, .bamboo-stand-div.selected{
+        margin-bottom: 1em;
+    }
+
+    .bamboo-stand-div .left, .black-edition-div .left, .mahogany-div .left{
+        margin: 5%;
+    }
+
+    .modal-close-btn{
+        width: 1.2em;
+        height: 1.2em;
+
+    }
+
+    .checkbox-div, .pledge-heading{
+        width: fit-content;
+    }
+
+    .checkbox{
+        width: 1.5em;
+        height: 1.5em;
+        border-radius: 50%;
+        border:1px solid var(--border-grey);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .checkbox > div{
+        width: .8em;
+        height: .8em;
+        background-color: var(--light-cyan);
+        border-radius: 50%;
+    }
+
+    .enter-pledge-div{
+        flex-direction: column;
+        justify-content: center;
+        align-items:center ;
+        padding-left: 2em;
+    }
+
+    .pledge-heading{
+        display: block;
+        margin-left: 0;
+    }
+
+    .pledge-heading > h2{
+        margin: 0 0 0 1em;
+    }
+
+    .pledge-heading h3{
+        margin: 0.5em 0 0 1em;
+    }
+
+    .pledge-text{
+        margin: 2.2em 0 1em 1em;
+    
+    }
+    
+    .enter-pledge-text{
+        text-align: center;
+        margin-right: 0;
+    }
+
+    .input-and-btn{
+        justify-content: center;
+    }
+
+    .continue-btn{
+        margin-left: 1em;
+        padding: 1em 2em 1em 2em;
+    }
+
+    .modal{
+        max-width: 20em;
+    }
+
+    .modal-div-content{
+        padding-right: 1em;
+    }
+    
+}
+
+
+@media (max-width: 480px) {
+
+    .back-project-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 20em;
+        padding: 2.5em 1.5em;
+    }
+
+    .logo-div, .hamburger{
+        margin: 8% 5% 0 5%;
+    }
+
+    .back-project-text{
+        width: 15em;
+    }
+
+    .back-project-btns{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+        width: 17em;
+    }
+
+    .mastercraft-logo{
+        position: absolute;
+        top: -8%;
+        left: 43%;
+    }
+    .back-project-btn{
+        font-size: 1rem;
+        padding: 1.2em 2rem;
+    }
+
+    .backers-div, .about-div{
+        width: 20em;
+        padding: 2.5em 1.5em;
+    }
+
+    .no-reward-div, .bamboo-stand-div, .black-edition-div, .mahogany-div{
+        max-width: 19em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width:420px) {
+    .modal{
+        padding: 2em;
+        max-width: 20em;
+        margin: 0;
+    }
+    .heading-and-text{
+        width: 20em;
+        margin-right: 0;
+        margin-left: 2em;
+    }
+
+    .heading-and-text{
+        margin-right: 0;
+        max-width: 17em;
+    }
+}
+
+
+@media (max-width: 380px) {
+    .back-project-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 15em;
+        padding: 2em 2em;
+    }
+
+    .back-project-btns{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+        width: 17em;
+    }
+
+    .backers-div, .about-div{
+        margin-top: 0;
+        width: 15em;
+        padding: 2em 2em;
+    }
+    .modal{
+        padding: 2em;
+        max-width: 15em;
+        margin: 0;
+    }
+
+    .no-reward-div{
+        width: 15em;
+    }
+
+    .input-and-btn{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .continue-btn, .modal-input{
+        margin-left: 0;
+    }
+
+    .continue-btn{
+        margin-top: 1em;
+    }
+
+    .heading-and-text{
+        width: 15em;
+    }
+
+    .about-div{
+        margin-top: 2em;
+    }
+
+    .mastercraft-logo{
+        position: absolute;
+        top: -8%;
+        left: 41%;
+    }
+
+    .progress-bar{
+        width: 15em;
+    }
+
+    .progress{
+        width: 10em;
+    }
+
+    .heading-and-text{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 19em;
+    }
+
+    .no-reward-div, .bamboo-stand-div, .black-edition-div, .mahogany-div{
+        max-width: 19em;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 340px) {
+    h2{
+        font-size: 1rem;
+    }
+
+    h3{
+        font-size: 0.9rem;
+    }
+    p{
+        font-size: 0.85rem;
+    }
+    .continue-btn{
+        max-width: 4em;
+    }
+
+    .modal{
+        max-width: 15em;
+    }
+
+    .dollar-sign{
+        top: 0.3em;
+    }
+}
+
+@media (max-width: 320px) {
+    .back-project-div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 12em;
+        padding: 2em 2em;
+    }
+
+    .back-project-btns{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 2em;
+        width: 12em;
+    }
+
+    .mastercraft-logo{
+        position: absolute;
+        top: -6%;
+        left: 40%;
+    }
+
+    .backers-div, .about-div{
+        width: 12em;
+        padding: 2em 2em;
+    }
+
+    .back-project-btn{
+        font-size: 1rem;
+        padding: 1.2em 1.5rem;
+        margin-bottom: 2em;
+    }
+
+    .black-edition-stand, .mahogany-stand, .bamboo-stand{
+        padding: 0 1em 1em 1em;
+    }
+
+    .select-reward-btn{
+        font-size: 0.9rem;
+    }
+
+    .mahogany-div, .black-edition-div, .no-reward-div, .bamboo-stand-div{
+        max-width: 16em;
+    }
+
+    #bamboo-pledge{
+        margin-right: 0;
+    }
+
+    .checkbox-and-heading{
+        margin-right: 0;
+    }
+    
+    .mobile-left{
+        width: fit-content;
+        margin-right: 0;
+    }
+
+    .input-and-btn{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .continue-btn{
+        margin: 1em 0 0 0;
+    }
+
+    .modal-input{
+        margin: 0;
+    }
+
+    .heading-and-close{
+        max-width: 16em;
+    }
+
+    .modal, .heading-and-text, .no-reward-div, .bamboo-stand-div, .black-edition-div, .mahogany-div{
+        max-width: 12em;
+    }
+}
